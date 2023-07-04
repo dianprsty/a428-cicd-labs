@@ -8,8 +8,10 @@ pipeline {
     stages {
         stage('Build') { 
             steps {
-                sh 'npm cache verify' 
-		sh 'npm install'
+                sh 'npm cache verify'
+            }
+            steps {
+		        sh 'npm install'
             } 
 		stage('Test') {
             steps {

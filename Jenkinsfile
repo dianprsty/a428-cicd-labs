@@ -10,6 +10,9 @@ pipeline {
             steps {
 		        sh 'npm cache verify'
             } 
+            steps {
+		        sh 'npm install'
+            }
         }
 		stage('Test') {
             steps {
